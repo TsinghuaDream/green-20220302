@@ -42,8 +42,8 @@ namespace Models
     virtual void fromMap(const Darabonba::Json &obj) override { from_json(obj, *this); validate(); };
     virtual Darabonba::Json toMap() const override { Darabonba::Json obj; to_json(obj, *this); return obj; };
     virtual bool empty() const override { return this->contentProducer_ == nullptr
-        && return this->contentPropagator_ == nullptr && return this->label_ == nullptr && return this->produceID_ == nullptr && return this->propagateID_ == nullptr && return this->reservedCode1_ == nullptr
-        && return this->reservedCode2_ == nullptr; };
+        && this->contentPropagator_ == nullptr && this->label_ == nullptr && this->produceID_ == nullptr && this->propagateID_ == nullptr && this->reservedCode1_ == nullptr
+        && this->reservedCode2_ == nullptr; };
     // contentProducer Field Functions 
     bool hasContentProducer() const { return this->contentProducer_ != nullptr;};
     void deleteContentProducer() { this->contentProducer_ = nullptr;};

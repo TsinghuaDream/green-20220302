@@ -56,8 +56,8 @@ namespace Models
     virtual void fromMap(const Darabonba::Json &obj) override { from_json(obj, *this); validate(); };
     virtual Darabonba::Json toMap() const override { Darabonba::Json obj; to_json(obj, *this); return obj; };
     virtual bool empty() const override { return this->aigcData_ == nullptr
-        && return this->customImage_ == nullptr && return this->faceData_ == nullptr && return this->logoData_ == nullptr && return this->ocrResult_ == nullptr && return this->publicFigure_ == nullptr
-        && return this->recognition_ == nullptr && return this->textInImage_ == nullptr && return this->vlContent_ == nullptr; };
+        && this->customImage_ == nullptr && this->faceData_ == nullptr && this->logoData_ == nullptr && this->ocrResult_ == nullptr && this->publicFigure_ == nullptr
+        && this->recognition_ == nullptr && this->textInImage_ == nullptr && this->vlContent_ == nullptr; };
     // aigcData Field Functions 
     bool hasAigcData() const { return this->aigcData_ != nullptr;};
     void deleteAigcData() { this->aigcData_ = nullptr;};
